@@ -53,10 +53,10 @@ const App = () => {
   const formatDate = (dateString) => {
     const date = new Date(dateString);
     const options = {
-      weekday: 'short', // "Mon", "Tue", etc.
-      year: 'numeric',  // "2023"
-      month: 'short',   // "Jan", "Feb", etc.
-      day: 'numeric'    // "1", "2", etc.
+      weekday: 'short',
+      year: 'numeric',
+      month: 'short',  
+      day: 'numeric'   
     };
     return date.toLocaleDateString('en-US', options);
   }
@@ -94,8 +94,8 @@ const App = () => {
           <h2 className='text-2xl font-bold'>Add a Task</h2>
           <form onSubmit={handleAdd} className='w-full flex flex-col gap-5'>
             <div className='flex w-full flex-col md:flex-row justify-center items-center gap-2'>
-              <input onChange={handleChange} value={todo} className='w-[75%] rounded-full h-8 px-3' type="text" name="" id="" />
-              <input onChange={handleChangeDates} value={date} className='w-[45%] rounded-full h-8 px-3' type="date" name="" id="" />
+              <input placeholder='Add a task' onChange={handleChange} value={todo} className='w-[75%] rounded-full h-8 px-3' type="text" name="" id="" />
+              <input placeholder='Task Date...' onChange={handleChangeDates} value={date} className='w-[45%] rounded-full h-8 px-3' type="date" name="" id="" />
             </div>
             <button disabled={todo.length <= 3} className='bg-blue-800 text-white transition-all duration-200 cursor-pointer disabled:cursor-no-drop hover:bg-blue-700 rounded-3xl text-lg px-5'>Save</button>
           </form>
