@@ -88,7 +88,7 @@ const App = () => {
   return (
     <div>
       <Navbar />
-      <div className="container p-5 min-h-[50vh] my-24 rounded-2xl flex flex-col items-center gap-5 opacity-95 bg-violet-100 w-[422px] mx-auto">
+      <div className="container p-5 min-h-[50vh] my-24 rounded-2xl flex flex-col items-center gap-5 opacity-95 bg-violet-100 w-[90%] md:w-[422px] mx-auto">
         <div className='flex flex-col gap-5'>
           <h1 className='text-3xl text-center font-bold'>iTask - Manage your todos at one place</h1>
           <h2 className='text-2xl font-bold'>Add a Task</h2>
