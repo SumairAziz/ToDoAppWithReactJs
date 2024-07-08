@@ -9,9 +9,14 @@ import { data } from 'autoprefixer';
 const App = () => {
   //Use States
   const [todo, setTodo] = useState("");
-  const [todos, setTodos] = useState([]);
+  // const [todos, setTodos] = useState([]);
   const [finished, setFinished] = useState(true);
   const [date, setDate] = useState("");
+  const [todos,setTodos]=useState(()=>{
+    const savedTasks=localStorage.getItem('todos');
+    return savedTasks? 
+    JSON.parse(savedTasks):[];
+  })
 
   //Use Effects
   useEffect(() => {
